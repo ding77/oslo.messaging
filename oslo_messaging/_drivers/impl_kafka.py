@@ -277,7 +277,7 @@ class ProducerConnection(Connection):
                 continue
             break
 
-        self.producer.poll(0)
+        self.producer.poll(1)
 
     def notify_send(self, topic, ctxt, msg, retry):
         """Send messages to Kafka broker.
